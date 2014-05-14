@@ -1,0 +1,1 @@
+java -cp jperfmeter.jar;oncrpc.jar com.infine.Perfmeter %1 %2 %3 %4 %5 %6 %7 %8 %9
