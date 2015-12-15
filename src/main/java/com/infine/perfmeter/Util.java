@@ -53,11 +53,13 @@ public class Util {
 
     public static String getVersion() {
         InputStream in = Util.class.getResourceAsStream("/com/infine/perfmeter/version.txt");
-        BufferedReader bin = new BufferedReader(new InputStreamReader(in));
-        String version = null;
-        try {
-            version = bin.readLine();
-        } catch (IOException e) {
+        String version = "Unknown";
+        if (in != null) {
+            BufferedReader bin = new BufferedReader(new InputStreamReader(in));
+            try {
+                version = bin.readLine();
+            } catch (IOException e) {
+            }
         }
         return version;
     }
